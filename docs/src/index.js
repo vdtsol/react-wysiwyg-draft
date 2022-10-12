@@ -7,7 +7,7 @@ import "../css/carbon.css"; // eslint-disable-line no-unused-vars
 import "../css/fonts.css"; // eslint-disable-line no-unused-vars
 import "../css/normalize.css"; // eslint-disable-line no-unused-vars
 import { App, Home, Demo, Docs, Author } from "./components";
-import "../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css"; // eslint-disable-line no-unused-vars
+import "../node_modules/react-wysiwyg-draft/dist/react-wysiwyg-draft.css"; // eslint-disable-line no-unused-vars
 
 ReactDOM.render(
   <Router history={hashHistory}>

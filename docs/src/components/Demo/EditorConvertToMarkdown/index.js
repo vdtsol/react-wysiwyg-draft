@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import { convertToRaw } from 'draft-js';
-import { Editor } from 'react-draft-wysiwyg';
+import { Editor } from 'react-wysiwyg-draft';
 import draftToMarkdown from 'draftjs-to-markdown';
 import Codemirror from 'react-codemirror';
 
@@ -41,7 +41,7 @@ class EditorConvertToMarkdown extends Component {
             value={
               'import React, { Component } from \'react\';\n' +
               'import { convertToRaw } from \'draft-js\';\n' +
-              'import { Editor } from \'react-draft-wysiwyg\';\n' +
+              'import { Editor } from \'react-wysiwyg-draft\';\n' +
               'import draftToMarkdown from \'draftjs-to-markdown\';\n' +
               '\n\n' +
               'class EditorConvertToMarkdown extends Component {\n' +

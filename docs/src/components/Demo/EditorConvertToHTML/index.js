@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import { EditorState, convertToRaw, ContentState } from 'draft-js';
-import { Editor } from 'react-draft-wysiwyg';
+import { Editor } from 'react-wysiwyg-draft';
 import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';
 import Codemirror from 'react-codemirror';
@@ -62,7 +62,7 @@ class EditorConvertToHTML extends Component {
             value={
               "import React, { Component } from 'react';\n" +
               "import { EditorState, convertToRaw } from 'draft-js';\n" +
-              "import { Editor } from 'react-draft-wysiwyg';\n" +
+              "import { Editor } from 'react-wysiwyg-draft';\n" +
               "import draftToHtml from 'draftjs-to-html';\n" +
               "import htmlToDraft from 'html-to-draftjs';\n" +
               '\n\n' +

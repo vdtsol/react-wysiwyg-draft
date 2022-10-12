@@ -1,7 +1,7 @@
 /* @flow */
 
 import React from "react";
-import { Editor } from "react-draft-wysiwyg";
+import { Editor } from "react-wysiwyg-draft";
 import Codemirror from "react-codemirror";
 
 import bold from "../../../../images/demo/bold.gif";
@@ -105,7 +105,7 @@ const EditorStyledToolbar = () => (
       <Codemirror
         value={
           "import React from 'react';\n" +
-          "import { Editor } from 'react-draft-wysiwyg';\n" +
+          "import { Editor } from 'react-wysiwyg-draft';\n" +
           "import * as Icons from 'images/icons';\n" +
           "\n\n" +
           "const EditorStyledToolbar = () => (\n" +

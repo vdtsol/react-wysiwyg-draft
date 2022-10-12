@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Editor } from 'react-draft-wysiwyg';
+import { Editor } from 'react-wysiwyg-draft';
 import Codemirror from 'react-codemirror';
 
 const EditorEmbedded = () => (

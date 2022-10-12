@@ -1,5 +1,5 @@
 {
-  "name": "react-draft-wysiwyg-documentation",
+  "name": "react-wysiwyg-draft-documentation",
   "version": "0.0.0",
   "description": "Documentation for React Wysiwyg Editor.",
   "main": "src/index.js",
@@ -30,7 +30,7 @@
     "precss": "^4.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-draft-wysiwyg": "^1.14.3",
+    "react-wysiwyg-draft": "^1.14.3",
     "react-router": "^5.1.2",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
@@ -45,7 +45,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jpuri/react-draft-wysiwyg.git"
+    "url": "https://github.com/jpuri/react-wysiwyg-draft.git"
   },
   "scripts": {
     "clean": "rimraf static",

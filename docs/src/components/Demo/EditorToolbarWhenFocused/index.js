@@ -1,7 +1,7 @@
 /* @flow */
 
 import React from 'react';
-import { Editor } from 'react-draft-wysiwyg';
+import { Editor } from 'react-wysiwyg-draft';
 import Codemirror from 'react-codemirror';
 import sampleEditorContent from '../../../util/sampleEditorContent';
 
@@ -42,7 +42,7 @@ const EditorToolbarWhenFocused = () => (
       <Codemirror
         value={
           'import React from \'react\';\n' +
-          'import { Editor } from \'react-draft-wysiwyg\';\n' +
+          'import { Editor } from \'react-wysiwyg-draft\';\n' +
           '\n\n' +
           'const contentBlocks = convertFromHTML(\'<p>Lorem ipsum \' +\n'+
           '  \'dolor sit amet, consectetur adipiscing elit. Mauris tortor felis, volutpat sit amet \' +\n'+

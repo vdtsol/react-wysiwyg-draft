@@ -12,6 +12,7 @@ class Suggestion {
       separator,
       trigger,
       getSuggestions,
+      getFnSuggestions,
       onChange,
       getEditorState,
       getWrapperRef,
@@ -20,10 +21,13 @@ class Suggestion {
       optionClassName,
       modalHandler,
     } = config;
+    const isFunc = getFnSuggestions() != null;
     this.config = {
       separator,
       trigger,
+      isFunc,
       getSuggestions,
+      getFnSuggestions,
       onChange,
       getEditorState,
       getWrapperRef,
@@ -33,7 +37,45 @@ class Suggestion {
       modalHandler,
     };
   }
-
+  getDataSuggestions = (mentionText, caseSensitive, check = false) => {
+    const {
+      getSuggestions,
+      getFnSuggestions,
+    } = this.config;
+    if (this.config.isFunc) {
+      return getFnSuggestions(mentionText, caseSensitive, check);
+    } else {
+      if (check) {
+        return getSuggestions()?.some(suggestion => {
+          if (suggestion.value) {
+            if (caseSensitive) {
+              return suggestion.value.indexOf(mentionText) >= 0;
+            }
+            return (
+              suggestion.value
+                .toLowerCase()
+                .indexOf(mentionText && mentionText.toLowerCase()) >= 0
+            );
+          }
+          return false;
+        });
+      } else {
+        getSuggestions()?.filter(suggestion => {
+          if (!mentionText || mentionText.length === 0) {
+            return true;
+          }
+          if (config.caseSensitive) {
+            return suggestion.value.indexOf(mentionText) >= 0;
+          }
+          return (
+            suggestion.value
+              .toLowerCase()
+              .indexOf(mentionText && mentionText.toLowerCase()) >= 0
+          );
+        })
+      }
+    }
+  }
   findSuggestionEntities = (contentBlock, callback) => {
     if (this.config.getEditorState()) {
       const {
@@ -62,19 +104,7 @@ class Suggestion {
         }
         if (index >= 0) {
           const mentionText = text.substr(index + preText.length, text.length);
-          const suggestionPresent = getSuggestions().some(suggestion => {
-            if (suggestion.value) {
-              if (this.config.caseSensitive) {
-                return suggestion.value.indexOf(mentionText) >= 0;
-              }
-              return (
-                suggestion.value
-                  .toLowerCase()
-                  .indexOf(mentionText && mentionText.toLowerCase()) >= 0
-              );
-            }
-            return false;
-          });
+          const suggestionPresent = this.getDataSuggestions(mentionText, this.config.caseSensitive, true);
           if (suggestionPresent) {
             callback(index === 0 ? 0 : index + 1, text.length);
           }
@@ -204,22 +234,7 @@ function getSuggestionComponent() {
 
     filterSuggestions = props => {
       const mentionText = props.children[0].props.text.substr(1);
-      const suggestions = config.getSuggestions();
-      this.filteredSuggestions =
-        suggestions &&
-        suggestions.filter(suggestion => {
-          if (!mentionText || mentionText.length === 0) {
-            return true;
-          }
-          if (config.caseSensitive) {
-            return suggestion.value.indexOf(mentionText) >= 0;
-          }
-          return (
-            suggestion.value
-              .toLowerCase()
-              .indexOf(mentionText && mentionText.toLowerCase()) >= 0
-          );
-        });
+      this.filteredSuggestions = this.getDataSuggestions(mentionText, this.config.caseSensitive);
     };
 
     addMention = () => {

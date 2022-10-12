@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { EditorState, Modifier } from 'draft-js';
-import { Editor } from 'react-draft-wysiwyg';
+import { Editor } from 'react-wysiwyg-draft';
 import Codemirror from 'react-codemirror';
 
 class CustomOption extends Component {
@@ -46,7 +46,7 @@ const EditorCustomToolbarOption = () => (
           'import React, { Component } from \'react\';\n' +
           'import PropTypes from \'prop-types\';\n' +
           'import { EditorState, Modifier } from \'draft-js\';\n' +
-          'import { Editor } from \'react-draft-wysiwyg\';\n' +
+          'import { Editor } from \'react-wysiwyg-draft\';\n' +
           '\n\n' +
           'class CustomOption extends Component {\n' +
           '  static propTypes = {\n' +

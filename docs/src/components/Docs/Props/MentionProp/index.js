@@ -18,7 +18,7 @@ export default () => (
     <Codemirror
       value={
         'import React from \'react\';\n' +
-        'import { Editor } from \'react-draft-wysiwyg\';\n' +
+        'import { Editor } from \'react-wysiwyg-draft\';\n' +
         '\n\n' +
         'const EditorWithMentionHashtag = () => (\n' +
         '  <Editor\n' +

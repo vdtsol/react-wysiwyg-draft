@@ -15,7 +15,7 @@ export default () => (
         'import React, { Component } from \'react\';\n' +
         'import PropTypes from \'prop-types\';\n' +
         'import { EditorState, Modifier } from \'draft-js\';\n' +
-        'import { Editor } from \'react-draft-wysiwyg\';\n' +
+        'import { Editor } from \'react-wysiwyg-draft\';\n' +
         '\n\n' +
         'class CustomOption extends Component {\n' +
         '  static propTypes = {\n' +
@@ -65,7 +65,7 @@ export default () => (
           <b>modalHandler</b>
           : In case the custom option has a dropdown or a popup. This can be used to control their opening and closing.
           Using this property will ensure that all popups close when mouse is click anywhere else on the page.
-          Example <a href="https://github.com/jpuri/react-draft-wysiwyg/blob/master/src/controls/ColorPicker/index.js#L16">here</a>.
+          Example <a href="https://github.com/jpuri/react-wysiwyg-draft/blob/master/src/controls/ColorPicker/index.js#L16">here</a>.
         </li>
       </ol>
     </div>

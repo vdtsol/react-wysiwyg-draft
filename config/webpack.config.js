@@ -10,8 +10,8 @@ module.exports = {
   entry: ['./src/index'],
   output: {
     path: path.join(__dirname, '../dist'),
-    filename: 'react-draft-wysiwyg.js',
-    library: 'reactDraftWysiwyg',
+    filename: 'react-wysiwyg-draft.js',
+    library: 'reactWysiwygDraft',
     libraryTarget: 'umd',
   },
   externals: {
@@ -30,7 +30,7 @@ module.exports = {
       },
     }),
     new MiniCssExtractPlugin({
-      filename: 'react-draft-wysiwyg.css',
+      filename: 'react-wysiwyg-draft.css',
       chunkFilename: '[id].css',
       ignoreOrder: false,
     }),

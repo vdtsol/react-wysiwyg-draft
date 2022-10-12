@@ -1,7 +1,7 @@
 /* @flow */
 
 import React from 'react';
-import { Editor } from 'react-draft-wysiwyg';
+import { Editor } from 'react-wysiwyg-draft';
 import Codemirror from 'react-codemirror';
 import uploadImageCallBack from '../../../util/uploadImageCallBack';
 
@@ -28,7 +28,7 @@ const EditorImage = () => (
       <Codemirror
         value={
           "import React from 'react';\n" +
-          "import { Editor } from 'react-draft-wysiwyg';\n" +
+          "import { Editor } from 'react-wysiwyg-draft';\n" +
           '\n\n' +
           'function uploadImageCallBack(file) {\n' +
           '  return new Promise(\n' +

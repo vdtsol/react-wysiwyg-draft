@@ -219,6 +219,7 @@ class WysiwygEditor extends Component {
           onChange: this.onChange,
           getEditorState: this.getEditorState,
           getSuggestions: this.getSuggestions,
+          getFnSuggestions: this.getFnSuggestions,
           getWrapperRef: this.getWrapperRef,
           modalHandler: this.modalHandler,
         })
@@ -235,6 +236,8 @@ class WysiwygEditor extends Component {
   getEditorState = () => this.state ? this.state.editorState : null;
 
   getSuggestions = () => this.props.mention && this.props.mention.suggestions;
+  
+  getFnSuggestions = () => this.props.mention && this.props.mention.func;
 
   afterChange = editorState => {
     setTimeout(() => {

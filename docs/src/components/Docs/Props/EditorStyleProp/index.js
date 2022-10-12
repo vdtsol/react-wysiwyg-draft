@@ -20,7 +20,7 @@ export default () => (
     <Codemirror
       value={
         'import React, { Component } from \'react\';\n' +
-        'import { Editor } from \'react-draft-wysiwyg\';\n' +
+        'import { Editor } from \'react-wysiwyg-draft\';\n' +
         '\n\n' +
         '<Editor\n' +
         '  wrapperClassName="wrapper-class"\n' +
@@ -39,7 +39,7 @@ export default () => (
     />
     <div className="docs-desc top-margined">
       Toolbar can be styles using toolbar property, detailed below. <br />
-      For more detailed styling, css classes in react-draft-wysiwyg.css can be overriden.
+      For more detailed styling, css classes in react-wysiwyg-draft.css can be overriden.
     </div>
   </div>
 );

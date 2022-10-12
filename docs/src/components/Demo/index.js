@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import draftToHtml from 'draftjs-to-html';
 import { convertToRaw } from 'draft-js';
 import draftToMarkdown from 'draftjs-to-markdown';
-import { Editor } from 'react-draft-wysiwyg';
+import { Editor } from 'react-wysiwyg-draft';
 import EditorConvertToHTML from './EditorConvertToHTML';
 import EditorConvertToJSON from './EditorConvertToJSON';
 import EditorConvertToMarkdown from './EditorConvertToMarkdown';
@@ -51,7 +51,7 @@ export default class Demo extends Component {
         <EditorStyledToolbar />
         <EditorImage />
         <div className="demo-section">
-          Some more examples can be found <a href="https://github.com/jpuri/react-draft-wysiwyg/tree/master/stories">here</a>.
+          Some more examples can be found <a href="https://github.com/jpuri/react-wysiwyg-draft/tree/master/stories">here</a>.
         </div>
       </div>
     );

@@ -15,7 +15,7 @@ export default () => (
           <li>
             <b>translations</b>
             : This can be used to override the default translations od add new ones for locales not already supported.
-            It should be an object similar to <a href="https://github.com/jpuri/react-draft-wysiwyg/blob/master/src/i18n/en.js">this</a>.
+            It should be an object similar to <a href="https://github.com/jpuri/react-wysiwyg-draft/blob/master/src/i18n/en.js">this</a>.
           </li>
         </ol>
       </div>
@@ -23,7 +23,7 @@ export default () => (
     <Codemirror
       value={
         'import React from \'react\';\n' +
-        'import { Editor } from \'react-draft-wysiwyg\';\n' +
+        'import { Editor } from \'react-wysiwyg-draft\';\n' +
         '\n\n' +
         'const EditorI18n = () => (\n' +
         '  <Editor\n' +

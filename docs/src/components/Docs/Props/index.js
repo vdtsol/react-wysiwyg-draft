@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { EditorState, convertToRaw, ContentState, Modifier } from 'draft-js';
 import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';
-import { Editor } from 'react-draft-wysiwyg';
+import { Editor } from 'react-wysiwyg-draft';
 import Codemirror from 'react-codemirror';
 import sampleEditorContent from '../../../util/sampleEditorContent';
 import EditorStyleProp from './EditorStyleProp';

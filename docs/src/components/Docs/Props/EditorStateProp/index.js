@@ -44,7 +44,7 @@ export default () => (
       value={
         'import React, { Component } from \'react\';\n' +
         'import { EditorState } from \'draft-js\';\n' +
-        'import { Editor } from \'react-draft-wysiwyg\';\n' +
+        'import { Editor } from \'react-wysiwyg-draft\';\n' +
         '\n\n' +
         'class ControlledEditor extends Component {\n' +
         '  constructor(props) {\n' +
@@ -86,7 +86,7 @@ export default () => (
       value={
         'import React, { Component } from \'react\';\n' +
         'import { EditorState } from \'draft-js\';\n' +
-        'import { Editor } from \'react-draft-wysiwyg\';\n' +
+        'import { Editor } from \'react-wysiwyg-draft\';\n' +
         '\n\n' +
         'class UncontrolledEditor extends Component {\n' +
         '  constructor(props) {\n' +
@@ -128,7 +128,7 @@ export default () => (
       value={
         'import React, { Component } from \'react\';\n' +
         'import { EditorState } from \'draft-js\';\n' +
-        'import { Editor } from \'react-draft-wysiwyg\';\n' +
+        'import { Editor } from \'react-wysiwyg-draft\';\n' +
         '\n\n' +
         'class UncontrolledEditor extends Component {\n' +
         '  constructor(props) {\n' +

@@ -1,7 +1,7 @@
 /* @flow */
 
 import React from 'react';
-import { Editor } from 'react-draft-wysiwyg';
+import { Editor } from 'react-wysiwyg-draft';
 import Codemirror from 'react-codemirror';
 import ColorPic from './ColorPic';
 
@@ -75,7 +75,7 @@ const EditorCustomizedToolbarOption = () => (
           '}\n' +
           '\n\n' +
           'import React, { Component } from \'react\';\n' +
-          'import { Editor } from \'react-draft-wysiwyg\';\n' +
+          'import { Editor } from \'react-wysiwyg-draft\';\n' +
           '\n\n' +
           'const EditorCustomizedToolbarOption = () => (\n' +
           '  <Editor\n' +
