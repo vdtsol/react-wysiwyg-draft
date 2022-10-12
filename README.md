@@ -1,9 +1,9 @@
 # React Draft Wysiwyg
 
 A Wysiwyg editor built using ReactJS and DraftJS libraries.
-[Demo Page](https://jpuri.github.io/react-wysiwyg-draft).
+[Demo Page](https://vdtsol.github.io/react-wysiwyg-draft).
 
-[![Build Status](https://travis-ci.org/jpuri/react-wysiwyg-draft.svg?branch=master)](https://travis-ci.org/jpuri/react-wysiwyg-draft)
+[![Build Status](https://travis-ci.org/vdtsol/react-wysiwyg-draft.svg?branch=master)](https://travis-ci.org/vdtsol/react-wysiwyg-draft)
 
 ![](http://i.imgur.com/tU7kJ6i.gif)
 
@@ -63,7 +63,7 @@ import "react-wysiwyg-draft/dist/react-wysiwyg-draft.css";
 
 ## Docs
 
-For more documentation check [here](https://jpuri.github.io/react-wysiwyg-draft/#/docs?_k=jjqinp).
+For more documentation check [here](https://vdtsol.github.io/react-wysiwyg-draft/#/docs?_k=jjqinp).
 
 ## Questions Discussions
 
@@ -71,7 +71,7 @@ For discussions join public channel #rd_wysiwyg in [DraftJS Slack Organization](
 
 ## Fund
 
-You can fund project at [Patreon](https://www.patreon.com/jyotipuri).
+You can fund project at [Patreon](https://www.patreon.com/devhau).
 
 ## Thanks
 
