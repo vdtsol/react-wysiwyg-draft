@@ -65,7 +65,7 @@ export default () => (
           <b>modalHandler</b>
           : In case the custom option has a dropdown or a popup. This can be used to control their opening and closing.
           Using this property will ensure that all popups close when mouse is click anywhere else on the page.
-          Example <a href="https://github.com/jpuri/react-wysiwyg-draft/blob/master/src/controls/ColorPicker/index.js#L16">here</a>.
+          Example <a href="https://github.com/vdtsol/react-wysiwyg-draft/blob/master/src/controls/ColorPicker/index.js#L16">here</a>.
         </li>
       </ol>
     </div>

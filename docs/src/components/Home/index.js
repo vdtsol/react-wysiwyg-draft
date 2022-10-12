@@ -11,7 +11,7 @@ export default class Home extends Component {
     script.id = "_carbonads_js";
     script.type = "text/javascript";
     script.src =
-      "//cdn.carbonads.com/carbon.js?serve=CEBIP5Q7&placement=jpurigithubio";
+      "//cdn.carbonads.com/carbon.js?serve=CEBIP5Q7&placement=vdtsolgithubio";
     script.async = true;
 
     document.getElementById("carbon_ad").appendChild(script);
@@ -64,7 +64,7 @@ export default class Home extends Component {
           </div>
           <div className="quote">
             <span className="quote-text">
-              Jyoti’s WYSIWYG editor has a lot of cool features. A great place
+              vdtsol’s WYSIWYG editor has a lot of cool features. A great place
               for inspiration and learning from the code.
             </span>
             <span className="quote-author">

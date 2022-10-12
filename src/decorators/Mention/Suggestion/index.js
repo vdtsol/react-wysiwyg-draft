@@ -43,7 +43,7 @@ class Suggestion {
       getFnSuggestions,
     } = this.config;
     if (this.config.isFunc) {
-      return getFnSuggestions(mentionText, caseSensitive, check);
+      return getFnSuggestions()(mentionText, caseSensitive, check);
     } else {
       if (check) {
         return getSuggestions()?.some(suggestion => {
@@ -60,11 +60,11 @@ class Suggestion {
           return false;
         });
       } else {
-        getSuggestions()?.filter(suggestion => {
+       return (getSuggestions()?.filter(suggestion => {
           if (!mentionText || mentionText.length === 0) {
             return true;
           }
-          if (config.caseSensitive) {
+          if (caseSensitive) {
             return suggestion.value.indexOf(mentionText) >= 0;
           }
           return (
@@ -72,7 +72,7 @@ class Suggestion {
               .toLowerCase()
               .indexOf(mentionText && mentionText.toLowerCase()) >= 0
           );
-        })
+        }))??[]
       }
     }
   }
@@ -81,8 +81,8 @@ class Suggestion {
       const {
         separator,
         trigger,
-        getSuggestions,
         getEditorState,
+        caseSensitive,
       } = this.config;
       const selection = getEditorState().getSelection();
       if (
@@ -104,7 +104,7 @@ class Suggestion {
         }
         if (index >= 0) {
           const mentionText = text.substr(index + preText.length, text.length);
-          const suggestionPresent = this.getDataSuggestions(mentionText, this.config.caseSensitive, true);
+          const suggestionPresent = this.getDataSuggestions(mentionText,caseSensitive, true);
           if (suggestionPresent) {
             callback(index === 0 ? 0 : index + 1, text.length);
           }
@@ -122,7 +122,7 @@ class Suggestion {
 }
 
 function getSuggestionComponent() {
-  const { config } = this;
+  const { config ,getDataSuggestions } = this;
   return class SuggestionComponent extends Component {
     static propTypes = {
       children: PropTypes.array,
@@ -234,7 +234,7 @@ function getSuggestionComponent() {
 
     filterSuggestions = props => {
       const mentionText = props.children[0].props.text.substr(1);
-      this.filteredSuggestions = this.getDataSuggestions(mentionText, this.config.caseSensitive);
+      this.filteredSuggestions = getDataSuggestions(mentionText,config.caseSensitive);
     };
 
     addMention = () => {

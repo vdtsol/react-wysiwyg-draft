@@ -15,7 +15,7 @@ export default () => (
           <li>
             <b>translations</b>
             : This can be used to override the default translations od add new ones for locales not already supported.
-            It should be an object similar to <a href="https://github.com/jpuri/react-wysiwyg-draft/blob/master/src/i18n/en.js">this</a>.
+            It should be an object similar to <a href="https://github.com/vdtsol/react-wysiwyg-draft/blob/master/src/i18n/en.js">this</a>.
           </li>
         </ol>
       </div>

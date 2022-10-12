@@ -7,6 +7,7 @@ import ReadOnly from './ReadOnly';
 import SpellCheck from './SpellCheck';
 import HashTag from './HashTag';
 import Mention from './Mention';
+import MentionFunc from './MentionFunc';
 import I18n from './I18n';
 import ToolbarHidden from './ToolbarHidden';
 import ImageUpload from './ImageUpload';
@@ -35,6 +36,7 @@ storiesOf('ToolbarHidden', module).add('story', () => <ToolbarHidden />);
 storiesOf('FocusBlurCallbacks', module).add('story', () => <FocusBlurCallbacks />);
 storiesOf('HashTag', module).add('story', () => <HashTag />);
 storiesOf('Mention', module).add('story', () => <Mention />);
+storiesOf('MentionFunc', module).add('story', () => <MentionFunc />);
 storiesOf('SelectedOptions', module).add('uncontrolled', () => <SelectedOptions />)
     .add('controlled', () => <ControlledSelectedOptions />);
 storiesOf('CustomToolbar', module).add('story', () => <CustomToolbar />);
